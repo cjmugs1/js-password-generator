@@ -1,2 +1,1 @@
-# js-password-generator
-A Random Password Generator
+# Password Generator Starter Code
