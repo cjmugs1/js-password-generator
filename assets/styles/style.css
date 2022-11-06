@@ -38,11 +38,10 @@ h2 {
 .set-password{
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px 40px;
+  padding: 0px 40px 30px 40px;
 }
 
 .password-input{
-  display: block;
   min-width: 300px;
   margin-top: 20px;
 }
