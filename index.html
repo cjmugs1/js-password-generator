@@ -12,17 +12,31 @@
       <header>
         <h1>Password Generator</h1>
       </header>
+
+      <div class="set-password">
+        <h2>Set Password Type</h2>
+        <div class="password-input">
+          <textarea id="password-length" placeholder="Password Length (8-128)" aria-label="Password length"></textarea>
+        </div>
+
+        <div class="password-input">
+          <label for="password-chars">Which Characters to Include?</label>
+          <br>
+          <select id="password-chars" multiple size="4">
+            <option value="lowercase">lowercase</option>
+            <option value="uppercase">UPPERCASE</option>
+            <option value="number">number 123456790</option>
+            <option value="special-character">special characters !@#$%^&*()</option>
+          </select>
+        </div>
+      </div>
+
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+          <textarea readonly id="password" placeholder="Your Secure Password" aria-label="Generated Password"></textarea>
         </div>
         <div class="card-footer">
           <button id="generate" class="btn" onclick="clearPassword();writePassword()">Generate Password</button>
