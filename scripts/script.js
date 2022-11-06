@@ -48,18 +48,23 @@ var possibleChars = {
 }
 
 function setPasswordChars() {
-  var passwordChars = $('#password-chars').val();
+  var userCharSelection = $('#password-chars').val();
   var selectedChars = "";
-  if (passwordChars.includes("lowercase", 0)){
+  if (userCharSelection == null){
+    window.prompt("Please select a character type to include!")
+  } else if (userCharSelection.includes("all", 0)){
+    selectedChars += possibleChars.lowercase + possibleChars.uppercase + possibleChars.number + possibleChars.specialCharacter;
+  } 
+  if (userCharSelection.includes("lowercase", 0)){
     selectedChars += possibleChars.lowercase;
   }
-  if (passwordChars.includes("uppercase", 0)){
+  if (userCharSelection.includes("uppercase", 0)){
     selectedChars += possibleChars.uppercase;
   }
-  if (passwordChars.includes("number", 0)){
+  if (userCharSelection.includes("number", 0)){
     selectedChars += possibleChars.number;
   }
-  if (passwordChars.includes("special-character", 0)){
+  if (userCharSelection.includes("special-character", 0)){
     selectedChars += possibleChars.specialCharacter;
   }
   password.chars = selectedChars
@@ -67,8 +72,7 @@ function setPasswordChars() {
 }
 
 function setPasswordLength(){
-  var passwordLength = document.getElementById("password-length").value;
-  document.getElementById("password-length").innerHTML = passwordLength;
+  var passwordLength = $.trim($("#password-length").val());
   password.length = passwordLength;
   if (password.length < 8){
     window.alert("A strong password contains at least 8 characters. Proceed at your own risk☠!");
