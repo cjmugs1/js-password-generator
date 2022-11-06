@@ -51,7 +51,7 @@ function setPasswordChars() {
   var userCharSelection = $('#password-chars').val();
   var selectedChars = "";
   if (userCharSelection == null){
-    window.prompt("Please select a character type to include!")
+    window.alert("Please select at least 1 character type to include!")
   } else if (userCharSelection.includes("all", 0)){
     selectedChars += possibleChars.lowercase + possibleChars.uppercase + possibleChars.number + possibleChars.specialCharacter;
   } 
