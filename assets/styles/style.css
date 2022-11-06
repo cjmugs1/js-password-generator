@@ -30,6 +30,23 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+.set-password{
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 40px;
+}
+
+.password-input{
+  display: block;
+  min-width: 300px;
+}
+
+.password-input textarea{
+  width: 50%;
+}
+
+
+
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
